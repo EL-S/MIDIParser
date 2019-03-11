@@ -24,16 +24,7 @@ channels = {}  # 1-16
 for i in range(track_amount):
     try:
         print(f"Attempting Track {i+1}")
-        decimal_parts = []
-
-        for part in track_parts[i]:
-            decimal_parts.append(part)
-
-        string_parts = ""
-
-        for segment in decimal_parts:
-            segment = str(segment)
-            string_parts += " "+segment
+        string_parts = ' '.join(str(segment) for segment in track_parts[i])
 
         string_parts = string_parts[1:]
         for value in range(144,160):
